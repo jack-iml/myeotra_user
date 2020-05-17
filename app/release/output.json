@@ -1,0 +1,19 @@
+[
+  {
+    "outputType": {
+      "type": "APK"
+    },
+    "apkInfo": {
+      "type": "MAIN",
+      "splits": [],
+      "versionCode": 5,
+      "versionName": "1.0",
+      "enabled": true,
+      "outputFile": "com.imltaxi.user_V5_VN-1.0_2019-01-17.apk",
+      "fullName": "release",
+      "baseName": "release"
+    },
+    "path": "com.imltaxi.user_V5_VN-1.0_2019-01-17.apk",
+    "properties": {}
+  }
+]

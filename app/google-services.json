@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "136342493195",
+    "firebase_url": "https://myeotra-user-81615.firebaseio.com",
+    "project_id": "myeotra-user-81615",
+    "storage_bucket": "myeotra-user-81615.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:136342493195:android:be01ed96e381a779f6cf0e",
+        "android_client_info": {
+          "package_name": "com.myeotra.user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "136342493195-0s6mcal3jgb32r24ib8ij338ng5jjcil.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4z-lvG7eAQnGr64nyaFsvVSbPsjxTUrs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "136342493195-0s6mcal3jgb32r24ib8ij338ng5jjcil.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

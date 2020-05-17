@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.select_service.ServiceTypeSlection">
+
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/_12sdp"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:includeFontPadding="false"
+            android:src="@drawable/ic_splash_logo"
+            android:text="Types of Services"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_15ssp" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/gps"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentEnd="true"
+                android:contentDescription="@string/app_name"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/gps" />
+
+            <TextView
+                android:id="@+id/tvdone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:background="@drawable/button_corner_done"
+                android:fontFamily="@font/montserrat_medium"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:text="Done"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionbar"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp">
+
+        <TextView
+            android:id="@+id/textdes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:fontFamily="@font/montserrat_light"
+            android:text="@string/which_service_do_you_want"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_22ssp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textdes">
+
+            <RelativeLayout
+                android:id="@+id/rltvRideService"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/card_round_gray_home">
+
+                <ImageView
+                    android:id="@+id/ivTaxi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:adjustViewBounds="true"
+
+                    android:src="@drawable/ic_taxi_ride_service" />
+
+                <TextView
+                    android:id="@+id/txtRideService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivTaxi"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Taxi Ride Service"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rltvloutDelivery"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_below="@+id/rltvRideService"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/card_round_gray_home">
+
+                <ImageView
+                    android:id="@+id/ivdelivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_delivery_service" />
+
+                <TextView
+                    android:id="@+id/txtDeliveryService"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivdelivery"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Custom Delivery Service"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rltvcourier"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_75sdp"
+                android:layout_below="@+id/rltvloutDelivery"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/card_round_gray_home">
+
+                <ImageView
+                    android:id="@+id/ivCourier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/ic_courier_service" />
+
+                <TextView
+                    android:id="@+id/txtCourier"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/ivCourier"
+                    android:fontFamily="@font/montserrat_light"
+                    android:text="Courier Service"
+                    android:textColor="@color/colorPrimaryText"
+                    android:textSize="@dimen/_14ssp" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/montserrat_bold"
+            android:text="Profile"
+            android:textAlignment="center"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/_14ssp" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:contentDescription="@string/app_name"
+            android:padding="12dp"
+            android:src="@mipmap/ic_back" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:background="@color/white"
+        tools:context=".ui.activity.profile.ProfileActivity">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/picture"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:transitionName="picture"
+                    app:civ_border_width="@dimen/_1sdp"
+                    app:srcCompat="@drawable/ic_user_placeholder" />
+
+
+                <RelativeLayout
+                    android:id="@+id/picture_cam"
+                    android:layout_width="@dimen/_75sdp"
+                    android:layout_height="@dimen/_75sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:background="@drawable/bg_round_transparent"
+                    android:transitionName="picture">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_cam"
+                        android:tint="@color/white" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp">
+
+
+                    <LinearLayout
+                        android:id="@+id/loutemail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivemail"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_email"
+                            android:tint="@color/yellow" />
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_toRightOf="@+id/ivemail"
+                            android:background="@color/view" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/email"
+                            android:textColorHint="@color/colorSecondaryText"
+                            app:hintTextColor="@color/colorSecondaryText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/email"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="@dimen/_14ssp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/loutemail"
+                        android:background="@color/view" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp">
+
+
+                    <LinearLayout
+                        android:id="@+id/loutivfirstname"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivfirstname"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_user"
+                            android:tint="@color/yellow" />
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_toRightOf="@+id/ivemail"
+                            android:background="@color/view" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/first_name"
+                            android:textColorHint="@color/colorSecondaryText"
+                            app:hintTextColor="@color/colorSecondaryText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/first_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:text="user"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="@dimen/_14ssp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/loutivfirstname"
+                        android:background="@color/view" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp">
+
+
+                    <LinearLayout
+                        android:id="@+id/loutlastname"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivlastname"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_user"
+                            android:tint="@color/yellow" />
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_toRightOf="@+id/ivemail"
+                            android:background="@color/view" />
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/last_name"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:textColorHint="@color/colorSecondaryText"
+                            app:hintTextColor="@color/colorSecondaryText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/last_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+
+                                android:text="one"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="@dimen/_14ssp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/loutlastname"
+                        android:background="@color/view" />
+                </RelativeLayout>
+
+
+                <!-- <RelativeLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/_55sdp">
+
+                     <LinearLayout
+                         android:id="@+id/loutlastname"
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_50sdp"
+                         android:orientation="horizontal">
+
+                         <ImageView
+                             android:id="@+id/ivlastname"
+                             android:layout_width="@dimen/_30sdp"
+                             android:layout_height="@dimen/_30sdp"
+                             android:layout_gravity="center_vertical"
+                             android:padding="@dimen/_5sdp"
+                             android:src="@drawable/ic_user"
+                             android:tint="@color/yellow" />
+
+                         <View
+                             android:layout_width="@dimen/_1sdp"
+                             android:layout_height="wrap_content"
+                             android:layout_marginLeft="@dimen/_5sdp"
+                             android:layout_marginTop="@dimen/_8sdp"
+                             android:layout_marginRight="@dimen/_5sdp"
+                             android:layout_marginBottom="@dimen/_8sdp"
+                             android:layout_toRightOf="@+id/ivemail"
+                             android:background="@color/view" />
+
+
+                         <com.google.android.material.textfield.TextInputLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_marginLeft="@dimen/_5sdp"
+                             android:hint="@string/last_name"
+                             android:textColorHint="@color/colorSecondaryText"
+                             app:hintTextColor="@color/colorSecondaryText">
+
+                             <com.google.android.material.textfield.TextInputEditText
+                                 android:id="@+id/last_name"
+                                 android:layout_width="match_parent"
+                                 android:layout_height="match_parent"
+                                 android:background="@null"
+                                 android:textColor="@color/colorPrimaryText"
+                                 android:textSize="@dimen/_14ssp" />
+
+                         </com.google.android.material.textfield.TextInputLayout>
+                     </LinearLayout>
+
+                     <View
+                         android:layout_width="match_parent"
+                         android:layout_height="@dimen/_1sdp"
+                         android:layout_below="@+id/loutlastname"
+                         android:background="@color/view" />
+                 </RelativeLayout>-->
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_55sdp">
+
+                    <LinearLayout
+                        android:id="@+id/loutphonenumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/ivphonenumber"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center_vertical"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_phone"
+                            android:tint="@color/yellow" />
+
+                        <View
+                            android:layout_width="@dimen/_1sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            android:layout_toRightOf="@+id/ivemail"
+                            android:background="@color/view" />
+
+
+                        <RelativeLayout
+                            android:id="@+id/loutcounty"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_50sdp"
+                            android:gravity="center_vertical"
+                            android:paddingTop="@dimen/_11sdp">
+
+                            <ImageView
+                                android:id="@+id/countryImage"
+                                android:layout_width="@dimen/_15sdp"
+                                android:layout_height="@dimen/_20sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:adjustViewBounds="true"
+
+                                android:src="@drawable/ic_otp" />
+
+                            <TextView
+                                android:id="@+id/countryNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/_6sdp"
+                                android:layout_toEndOf="@+id/countryImage"
+                                android:gravity="center"
+                                android:text=""
+                                android:textSize="@dimen/_15ssp" />
+
+
+                        </RelativeLayout>
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:hint="@string/phone_number"
+                            android:textColorHint="@color/colorSecondaryText"
+                            app:hintTextColor="@color/colorSecondaryText">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/mobile"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null"
+                                android:editable="false"
+                                android:focusableInTouchMode="false"
+                                android:textColor="@color/colorPrimaryText"
+                                android:textSize="@dimen/_14ssp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@+id/loutphonenumber"
+                        android:background="@color/view" />
+
+                    <ImageView
+                        android:id="@+id/qr_scan"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_20sdp"
+                        android:contentDescription="@string/qr_scan"
+                        app:srcCompat="@drawable/ic_qr_code" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <!--        <LinearLayout-->
+            <!--            android:layout_width="match_parent"-->
+            <!--            android:layout_height="wrap_content"-->
+            <!--            android:background="@drawable/border_bottom"-->
+            <!--            android:orientation="vertical">-->
+
+            <!--            <TextView-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:paddingStart="8dp"-->
+            <!--                android:paddingTop="8dp"-->
+            <!--                android:paddingEnd="0dp"-->
+            <!--                android:text="@string/phone_number"-->
+            <!--                android:textAppearance="@style/TextAppearance.AppCompat.Body1"-->
+            <!--                android:textColor="@color/colorSecondaryText" />-->
+            <!--            <FrameLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="wrap_content">-->
+            <!--                <TextView-->
+            <!--                    android:id="@+id/mobile"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:background="@null"-->
+            <!--                    android:fontFamily="@font/clanpro_narrnews"-->
+            <!--                    android:padding="12dp"-->
+            <!--                    android:textColor="@color/colorPrimaryText"-->
+            <!--                    android:textSize="@dimen/text_18" />-->
+
+            <!--                <ImageView-->
+            <!--                    android:id="@+id/qr_scan"-->
+            <!--                    android:layout_width="@dimen/_35sdp"-->
+            <!--                    android:layout_height="match_parent"-->
+            <!--                    android:layout_gravity="center|end"-->
+            <!--                    android:layout_margin="@dimen/_5sdp"-->
+            <!--                    android:contentDescription="@string/qr_scan"-->
+            <!--                    app:srcCompat="@drawable/ic_qr_code" />-->
+
+            <!--            </FrameLayout>-->
+
+            <!--        </LinearLayout>-->
+
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:background="@drawable/button_corner_offline"
+                android:fontFamily="@font/montserrat_bold"
+                android:text="@string/save"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_14ssp" />
+
+            <TextView
+                android:id="@+id/change_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat_regular"
+                android:gravity="center"
+                android:padding="@dimen/_12sdp"
+                android:text="@string/change_password"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

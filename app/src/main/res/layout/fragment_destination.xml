@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.destination.DestinationFragment">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/locations_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rvParent"
+        android:layout_below="@+id/destination"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/white"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/rvParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/rltvtop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:background="@drawable/card_corner_location"
+            android:paddingBottom="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/tvusername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:fontFamily="@font/montserrat_medium"
+
+
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12ssp" />
+
+            <ImageView
+                android:id="@+id/ivnext"
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                android:src="@drawable/ic_next"
+                android:tint="@color/white"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rltvtop"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            android:background="@drawable/top_corner_white">
+
+            <EditText
+                android:id="@+id/whereto"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/bg_location_pick"
+
+                android:fontFamily="@font/montserrat_medium"
+                android:hint="Where to ?"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryText" />
+
+        </RelativeLayout>
+        <!--android:focusableInTouchMode="false"-->
+    </RelativeLayout>
+
+
+</RelativeLayout>

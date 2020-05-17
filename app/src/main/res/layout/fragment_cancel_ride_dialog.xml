@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    tools:context=".ui.fragment.cancel_ride.CancelRideDialogFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/top_corner_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="center"
+            android:padding="16dp"
+            android:text="@string/reason_for_canceling"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_18" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_8sdp"
+            android:paddingRight="@dimen/_8sdp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_8sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:text="Select reason of cancellation" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cancel_ride_border">
+
+
+                <Spinner
+                    android:id="@+id/spinnerServiceType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:prompt="@string/select_service_type" />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcvReason"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone" />
+
+            <EditText
+                android:id="@+id/cancel_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:background="@drawable/button_border"
+                android:gravity="top|start"
+                android:hint="@string/write_your_comment"
+                android:inputType="textMultiLine|textAutoComplete|textPersonName|textCapWords"
+                android:lines="3"
+                android:maxLength="250"
+                android:maxLines="3"
+                android:padding="16dp"
+                android:scrollbars="vertical"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="@dimen/text_14"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dismiss"
+                style="@style/MyButton.Primary"
+                android:text="@string/dismiss"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/submit"
+                style="@style/MyButton.Accent"
+                android:text="Send" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

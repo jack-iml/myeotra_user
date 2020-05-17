@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_location"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="horizontal">
+
+
+    <CheckBox
+        android:id="@+id/ivDefaultCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:button="@drawable/custom_checkbox"
+        android:contentDescription="@string/app_name"
+        android:visibility="invisible" />
+
+
+    <TextView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivDefaultCard"
+
+        android:layout_toLeftOf="@+id/iv_card"
+        android:ellipsize="end"
+        android:fontFamily="@font/clanpro_narrnews"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="5dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:singleLine="true"
+        android:text=""
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_14"
+        tools:ignore="PrivateResource" />
+
+    <ImageView
+        android:id="@+id/iv_card"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+
+
+        android:src="@drawable/ic_card" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card"
+        android:layout_marginBottom="15dp"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:text="Valid Till"
+            android:textColor="@color/view"
+            android:textSize="@dimen/text_14"
+            tools:ignore="PrivateResource" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="@font/clanpro_narrnews"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:singleLine="true"
+            android:text="5/25"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="@dimen/text_14"
+            tools:ignore="PrivateResource" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate
+            android:fromDegrees="90"
+            android:toDegrees="90">
+
+            <shape android:shape="line">
+                <size android:height="@dimen/_500sdp" />
+                <stroke
+                    android:width="@dimen/_1sdp"
+                    android:color="@color/blacktrasparent"
+                    android:dashWidth="1dp"
+                    android:dashGap="1dp" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>
+-->
+
+<!--
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    <size android:height="@dimen/_500sdp" />
+    <stroke
+        android:width="@dimen/_1sdp"
+        android:color="@color/blacktrasparent"
+        android:dashWidth="1dp"
+        android:dashGap="1dp" />
+</shape>
+-->
+
+
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="90">
+
+    <!-- <size
+         android:height="400dp"/>
+ -->
+    <!--<stroke
+        android:color="#C7B299"
+        android:dashWidth="10px"
+        android:dashGap="20px"
+        android:width="5dp"/>
+-->
+    <shape android:shape="line">
+
+        <stroke
+            android:width="1dp"
+            android:color="@color/blacktrasparent"
+            android:dashWidth="10dp"
+            android:dashGap="20dp" />
+    </shape>
+
+</rotate>

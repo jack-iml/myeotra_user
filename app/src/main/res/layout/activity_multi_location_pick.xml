@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".ui.activity.pick_multiple_location.MultiLocationPickActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/actionar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="?attr/actionBarSize"
+            android:layout_height="?attr/actionBarSize"
+            android:padding="@dimen/_12sdp"
+            android:src="@mipmap/ic_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Search Multiple Stop"
+            android:textSize="@dimen/_14ssp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/actionar"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <EditText
+            android:id="@+id/destination"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:hint="Search Stop"
+            android:imeOptions="actionDone"
+            android:inputType="textPostalAddress|textPersonName|textCapWords"
+            android:padding="12dp"
+            android:singleLine="true"
+            android:tag="destination"
+            android:textColor="@color/colorPrimaryText"
+            android:textColorHint="#AAA"
+            android:textSize="@dimen/text_14" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/locations_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/destination"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="vertical" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
